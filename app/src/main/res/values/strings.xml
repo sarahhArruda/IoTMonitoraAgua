@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">IoTMonitoraAgua</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sensores">Sensores</string>
+    <string name="in_cio">Início</string>
+    <string name="dados">Dados</string>
+    <string name="dispositivos">Dispositivos</string>
+    <string name="usuario">Perfil</string>
+    <string name="dashboard">O oceano de informações</string>
+    <string name="sensoresTexto">Rede de Sensores</string>
+    <string name="sensor_de_ph">PH</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="tds">TDS</string>
+    <string name="turbidez">Turbidez</string>
+    <string name="tend_ncias_h_dricas">Tendências Hídricas</string>
+</resources>

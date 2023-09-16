@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/Home"
+        android:title="@string/in_cio"
+        android:icon="@drawable/ic_baseline_home_24"
+        >
+    </item>
+    <item
+        android:id="@+id/dadosItemMenu"
+        android:title="@string/dados"
+        android:icon="@drawable/dados"
+        >
+    </item>
+    <item
+        android:id="@+id/pontosItemMenu"
+        android:title="@string/dispositivos"
+        android:icon="@drawable/pontos_coleta"
+        >
+    </item>
+    <item
+        android:id="@+id/usuarioItemMenu"
+        android:title="@string/usuario"
+        android:icon="@drawable/usuario_icone"
+        >
+    </item>
+</menu>
