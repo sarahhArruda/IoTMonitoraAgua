@@ -4,9 +4,9 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="sensores">Sensores</string>
     <string name="in_cio">Início</string>
-    <string name="dados">Dados</string>
-    <string name="dispositivos">Dispositivos</string>
-    <string name="usuario">Perfil</string>
+    <string name="dados">Insights</string>
+    <string name="dispositivos">Estações</string>
+    <string name="usuario">Água e Eu</string>
     <string name="dashboard">O oceano de informações</string>
     <string name="sensoresTexto">Rede de Sensores</string>
     <string name="sensor_de_ph">PH</string>
