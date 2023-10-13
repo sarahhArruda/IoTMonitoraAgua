@@ -36,21 +36,19 @@ public class Dashboard extends AppCompatActivity
                     {
                         case (R.id.Home):
                             startActivity(new Intent(this, Dashboard.class));
-                            finish();
                             return true;
 
                         case (R.id.dadosItemMenu):
                             startActivity(new Intent(this, Dados.class));
-                            finish();
+
                             return true;
                         case (R.id.pontosItemMenu):
                             startActivity(new Intent(this, Pontos_de_Coleta.class));
-                            finish();
+
                             return true;
 
                         case (R.id.usuarioItemMenu):
                             startActivity(new Intent(this, Conta.class));
-                            finish();
                             return true;
                         default:
                             return false;
