@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="Sensor de Temperatura"
+        app:title="Sensor de umidade"
         app:titleTextColor="@color/white"></androidx.appcompat.widget.Toolbar>
 
     <!-- Write code from here -->
@@ -39,11 +39,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="@+id/rectangle_1"
         app:layout_constraintStart_toStartOf="@+id/rectangle_1"
         app:layout_constraintTop_toTopOf="@+id/rectangle_1"
-        app:srcCompat="@drawable/temperatura"
-        android:importantForAccessibility="no" />
+        app:srcCompat="@drawable/umidade" />
 
     <TextView
         android:id="@+id/text_ph"
@@ -55,7 +55,7 @@
         android:layout_marginBottom="70dp"
         android:layout_toEndOf="@id/ic_ph"
         android:fontFamily="@font/istok_web"
-        android:text="23°C"
+        android:text="80"
         android:textColor="#000000"
         android:textSize="50sp"
         android:textStyle="bold"
@@ -74,7 +74,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="30dp"
         android:layout_toEndOf="@id/ic_ph"
-        android:text="A temperatura está adequada"
+        android:text="A umidade está adequada"
         app:layout_constraintEnd_toEndOf="@+id/rectangle_1"
         app:layout_constraintStart_toEndOf="@+id/ic_ph"
         app:layout_constraintTop_toBottomOf="@+id/text_ph"
