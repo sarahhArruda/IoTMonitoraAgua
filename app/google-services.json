@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "603706248560",
+    "firebase_url": "https://testemonit-b47a7-default-rtdb.firebaseio.com",
+    "project_id": "testemonit-b47a7",
+    "storage_bucket": "testemonit-b47a7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603706248560:android:e924c18f36e08817b593b5",
+        "android_client_info": {
+          "package_name": "com.example.waterprojectdata"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603706248560-em7c693jno5pin5cggqj8rcparcuro3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl3KBnjT0TwuJP4Zbf752P7JN1u7VuI8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603706248560-em7c693jno5pin5cggqj8rcparcuro3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603706248560:android:4470963d7e3c737ab593b5",
+        "android_client_info": {
+          "package_name": "br.superMonitoraAgua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603706248560-em7c693jno5pin5cggqj8rcparcuro3l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAl3KBnjT0TwuJP4Zbf752P7JN1u7VuI8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603706248560-em7c693jno5pin5cggqj8rcparcuro3l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

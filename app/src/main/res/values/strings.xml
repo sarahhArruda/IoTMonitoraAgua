@@ -15,4 +15,6 @@
     <string name="turbidez">Turbidez</string>
     <string name="tend_ncias_h_dricas">Tendências Hídricas</string>
     <string name="aqualab">Aqua Lab</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>
