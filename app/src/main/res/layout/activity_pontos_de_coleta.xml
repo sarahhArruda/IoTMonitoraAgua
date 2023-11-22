@@ -16,7 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="Pontos de Coleta"
+        app:title="Estações"
         app:titleTextColor="@color/white">
     </androidx.appcompat.widget.Toolbar>
 

@@ -46,7 +46,7 @@ public class Dashboard extends AppCompatActivity
         t = findViewById(R.id.toolbarDashboard);
 
         lineChart = (LineChart) findViewById(R.id.LinhasGraficoDashBoard);
-        inserirDados();
+       inserirDados();
 
         navigationView = (BottomNavigationView) findViewById(R.id.navegacaoDash);
         navigationView.setOnNavigationItemSelectedListener
