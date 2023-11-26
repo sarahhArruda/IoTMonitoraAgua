@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="sensoresTexto">Sensores</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>

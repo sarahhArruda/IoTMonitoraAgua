@@ -6,7 +6,7 @@
     <string name="in_cio">Início</string>
     <string name="dados">Insights</string>
     <string name="dispositivos">Estações</string>
-    <string name="usuario">Água e Eu</string>
+    <string name="usuario">Conta</string>
     <string name="dashboard">O oceano de informações</string>
     <string name="sensoresTexto">Rede de Sensores</string>
     <string name="sensor_de_ph">PH</string>
@@ -15,4 +15,6 @@
     <string name="turbidez">Turbidez</string>
     <string name="tend_ncias_h_dricas">Tendências Hídricas</string>
     <string name="aqualab">Aqua Lab</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>

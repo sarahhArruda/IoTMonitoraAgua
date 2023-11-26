@@ -1,12 +1,19 @@
 package br.superMonitoraAgua;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import br.superMonitoraAgua.fragment.HomeFragment;
+import br.superMonitoraAgua.fragment.SensoresFragment;
 
 public class Dashboard extends AppCompatActivity
 {
@@ -18,7 +25,7 @@ public class Dashboard extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-        t = findViewById(R.id.toolbarSensorPh);
+        t = findViewById(R.id.toolbarDashboard);
 
         navigationView = (BottomNavigationView) findViewById(R.id.navegacaoDash);
         navigationView.setOnNavigationItemSelectedListener
