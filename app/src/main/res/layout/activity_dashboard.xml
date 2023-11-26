@@ -7,7 +7,7 @@
     tools:context=".Dashboard">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarDashboard"
+        android:id="@+id/toolbarSensorPh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/purple_700"
@@ -61,7 +61,7 @@
             </TextView>
             
             <GridLayout
-                android:id="@+id/gradeCardsSensores"
+                android:id="@+id/gradeCardsInfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="2"
