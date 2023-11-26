@@ -19,5 +19,4 @@
         app:title="Insights"
         app:titleTextColor="@color/white">
     </androidx.appcompat.widget.Toolbar>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
