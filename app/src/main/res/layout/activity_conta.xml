@@ -18,6 +18,38 @@
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         app:title="Conta"
         app:titleTextColor="@color/white">
+
+        <ImageView
+            android:id="@+id/exitIcon"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_exit_to_app_24"
+            android:layout_gravity="end"
+            android:contentDescription="@string/exit_icon"
+            android:onClick="logout"/>
+
     </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarConta">
+
+        <TextView
+            android:id="@+id/textViewStatusLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/purple_700"
+            android:text=""
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

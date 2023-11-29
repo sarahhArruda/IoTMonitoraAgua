@@ -33,6 +33,7 @@
         app:layout_constraintTop_toBottomOf="@+id/TextoLogin">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campoEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_baseline_email_24"
@@ -61,6 +62,7 @@
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/campoSenhaLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_baseline_remove_red_eye_24"
@@ -76,6 +78,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/bc_button"
+        android:onClick="validarCredenciais"
         android:shadowRadius="20"
         android:text="Entrar"
         android:textColor="@color/white"
