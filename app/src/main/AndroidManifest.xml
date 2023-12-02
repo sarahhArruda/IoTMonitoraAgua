@@ -11,6 +11,9 @@
         android:theme="@style/Theme.IoTMonitoraAgua"
         tools:targetApi="31">
         <activity
+            android:name=".Sensor_TDS"
+            android:exported="false" />
+        <activity
             android:name=".activity_sensor_turbidez"
             android:exported="false" />
         <activity

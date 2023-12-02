@@ -18,4 +18,6 @@
     <string name="senha">Senha</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="exit_icon">Exit Icon</string>
+    <string name="os_dados_em_gr_ficos">Os dados em gráficos</string>
+    <string name="exportar_dados">Exportar Dados</string>
 </resources>

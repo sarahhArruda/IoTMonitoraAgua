@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
@@ -44,6 +45,8 @@ public class Dashboard extends AppCompatActivity
         setContentView(R.layout.activity_dashboard);
 
         t = findViewById(R.id.toolbarDashboard);
+
+
 
         lineChart = (LineChart) findViewById(R.id.LinhasGraficoDashBoard);
        inserirDados();
@@ -139,6 +142,13 @@ public class Dashboard extends AppCompatActivity
         lineChart.notifyDataSetChanged();
         lineChart.invalidate();
 
+    }
+
+    public void irCardSensorTDS(View view)
+    {
+        Intent intent = new Intent(this, Sensor_TDS.class);
+        startActivity(intent);
+        finish();
     }
     public static class MyAxisFormatter extends ValueFormatter
     {
