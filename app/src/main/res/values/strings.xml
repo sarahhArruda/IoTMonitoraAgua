@@ -20,4 +20,7 @@
     <string name="exit_icon">Exit Icon</string>
     <string name="os_dados_em_gr_ficos">Os dados em gráficos</string>
     <string name="exportar_dados">Exportar Dados</string>
+    <string name="s_lidos_dissolvidos_totais">Sólidos Dissolvidos Totais</string>
+    <string name="condutividade_el_trica">CDE</string>
+    <string name="alertas">Alertas</string>
 </resources>

@@ -13,11 +13,21 @@
         android:icon="@drawable/dados"
         >
     </item>
+
+    <!-- fora, por enquanto ^-^
     <item
         android:id="@+id/pontosItemMenu"
         android:title="@string/dispositivos"
         android:icon="@drawable/pontos_coleta"
         >
+    </item>
+    -->
+    <item
+        android:id="@+id/notificaçõesDados"
+        android:title="@string/alertas"
+        android:icon="@drawable/baseline_notifications_24"
+        >
+
     </item>
     <item
         android:id="@+id/usuarioItemMenu"

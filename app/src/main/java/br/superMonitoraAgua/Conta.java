@@ -36,7 +36,7 @@ public class Conta extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
-        auth = FirebaseAuth.getInstance(); // Adicione esta linha para inicializar a instância de FirebaseAuth
+        auth = FirebaseAuth.getInstance();
 
         textViewStatusLogin = findViewById(R.id.textViewStatusLogin);
         updateUI();

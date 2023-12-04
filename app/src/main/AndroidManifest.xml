@@ -11,8 +11,18 @@
         android:theme="@style/Theme.IoTMonitoraAgua"
         tools:targetApi="31">
         <activity
+            android:name=".Alertas_Dados"
+            android:exported="false"
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
+            />
+        <activity
             android:name=".Sensor_TDS"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".activity_sensor_turbidez"
             android:exported="false" />
@@ -24,11 +34,16 @@
             android:exported="false" />
         <activity
             android:name=".activity_sensor_ph"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Sensores_visualizacao"
             android:exported="false"
-            android:parentActivityName=".Dashboard">
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -36,7 +51,9 @@
         <activity
             android:name=".Conta"
             android:exported="false"
-            android:parentActivityName=".Dashboard">
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -44,7 +61,9 @@
         <activity
             android:name=".Pontos_de_Coleta"
             android:exported="false"
-            android:parentActivityName=".Dashboard">
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -52,7 +71,9 @@
         <activity
             android:name=".Dados"
             android:exported="false"
-            android:parentActivityName=".Dashboard">
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -60,7 +81,9 @@
         <activity
             android:name=".Sensores_Activity"
             android:exported="false"
-            android:parentActivityName=".Dashboard">
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -68,7 +91,9 @@
         <activity
             android:name=".Dashboard"
             android:exported="false"
-            android:parentActivityName=".Dashboard">
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -76,7 +101,9 @@
         <activity
             android:name=".Tela_de_Cadastro"
             android:exported="false"
-            android:parentActivityName=".LoginActivity">
+            android:parentActivityName=".LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

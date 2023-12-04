@@ -18,6 +18,16 @@
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
         app:title="Sensor - TDS"
         app:titleTextColor="@color/white">
+
+        <ImageView
+            android:id="@+id/refreshIconTDS"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:src="@drawable/baseline_refresh_24"
+            android:layout_gravity="end"
+            android:contentDescription="@string/exit_icon"
+            android:onClick="atualizar"
+            />
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
@@ -35,48 +45,112 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cartaPrincipalTDS"
+            <GridLayout
+                android:id="@+id/gradeCardPamsTDS"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="1"
                 android:layout_marginTop="20dp"
-                android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_gravity="center_horizontal"
-                android:backgroundTint="@color/white"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="2dp"
+                android:layout_marginStart="10dp"
                 android:alignmentMode="alignMargins"
-                app:cardUseCompatPadding="true">
+                android:layout_gravity="center_horizontal"
+                android:columnOrderPreserved="false">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    tools:ignore="UseCompoundDrawables">
-
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginStart="30dp"
-                        android:src="@drawable/tubo_agua"
-                        tools:ignore="ContentDescription">
-                    </ImageView>
-                    <TextView
-                        android:id="@+id/valorPmTDS"
-                        android:layout_marginStart="10dp"
-                        android:textSize="35sp"
-                        android:text="16.0 mg/L"
-                        android:textColor="@color/purple_700"
-                        android:textStyle="bold"
-                        android:layout_gravity="center_vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                    </TextView>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cartaParametroTDS"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="0"
+                    app:cardElevation="2dp"
+                    android:backgroundTint="@color/white"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:src="@drawable/qualidade"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            >
+                        </ImageView>
+                        <TextView
+                            android:text="@string/tds"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/purple_700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/valorAtualParametroTDS"
+                            android:text=""
+                            android:layout_marginTop="2dp"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/vermelhao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cartaParametroCDE"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    app:cardElevation="2dp"
+                    android:backgroundTint="@color/white"
+                    app:cardUseCompatPadding="true"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:src="@drawable/condutividade"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            >
+                        </ImageView>
+                        <TextView
+                            android:text="@string/condutividade_el_trica"
+                            android:layout_marginTop="5dp"
+                            android:textStyle="bold"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/purple_700"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                        <TextView
+                            android:id="@+id/valorAtualParametroCDE"
+                            android:text=""
+                            android:layout_marginTop="2dp"
+                            android:textSize="20sp"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/vermelhao"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
 
             <TextView
                 android:id="@+id/textViewDadosLabel"
@@ -97,7 +171,7 @@
                 android:id="@+id/cardGráficoTDS"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginTop="15dp"
                 android:elevation="10dp"
                 app:cardElevation="2dp"
@@ -119,56 +193,7 @@
                     </com.github.mikephil.charting.charts.BarChart>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-            <GridLayout
-                android:id="@+id/gradeCardsSecundarios"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:rowCount="1"
-                android:layout_margin="10dp"
-                android:alignmentMode="alignMargins"
-                android:layout_gravity="center_horizontal"
-                android:columnOrderPreserved="false">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/carta01TDS"
-                    android:layout_width="170dp"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="0"
-                    app:cardElevation="1dp"
-                    android:backgroundTint="@color/gray"
-                    app:cardUseCompatPadding="true"
-                    >
-                </androidx.cardview.widget.CardView>
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/carta02TDS"
-                    android:layout_width="170dp"
-                    android:layout_height="100dp"
-                    app:cardCornerRadius="15dp"
-                    android:layout_columnWeight="1"
-                    android:layout_rowWeight="1"
-                    app:cardElevation="1dp"
-                    android:backgroundTint="@color/gray"
-                    app:cardUseCompatPadding="true"
-                    >
-                </androidx.cardview.widget.CardView>
-            </GridLayout>
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cartaFinalTDS"
-                android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_marginTop="-10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:layout_gravity="center_horizontal"
-                android:backgroundTint="@color/gray"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="1dp"
-                android:alignmentMode="alignMargins"
-                app:cardUseCompatPadding="true">
-            </androidx.cardview.widget.CardView>
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/cadastrar"
                 android:layout_width="match_parent"

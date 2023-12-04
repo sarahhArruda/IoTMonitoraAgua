@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#EAEAEA</color>
     <color name="cinzao">#D9D9D9</color>
+    <color name="vermelhao"> #FF0000 </color>
 </resources>
