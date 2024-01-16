@@ -4,10 +4,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.AppCompatButton;
@@ -23,8 +26,9 @@ import com.google.firebase.auth.FirebaseUser;
 public class LoginActivity extends AppCompatActivity
 {
     private com.google.android.material.textfield.TextInputEditText campoSenha, campoEmail;
+    private ProgressBar barra;
 
-
+    Usuario usuario;
     private FirebaseAuth auth = FirebaseAuth.getInstance();
 
 
@@ -36,37 +40,55 @@ public class LoginActivity extends AppCompatActivity
 
         campoEmail = findViewById(R.id.campoEmailLogin);
         campoSenha = findViewById(R.id.campoSenhaLogin);
+        barra = findViewById(R.id.barraLogin);
 
     }
 
-    public void validarCredenciais(View view) {
+    public void validarCredenciais(View view)
+    {
         String email = campoEmail.getText().toString().trim();
         String senha = campoSenha.getText().toString().trim();
 
-        if (!email.isEmpty() && !senha.isEmpty()) {
-            auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        if (!email.isEmpty() && !senha.isEmpty())
+        {
+
+            barra.setVisibility(View.VISIBLE);
+            auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>()
+            {
                 @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
+                public void onComplete(@NonNull Task<AuthResult> task)
+                {
                     manipularResultadoLogin(task, view);
+
                 }
             });
-        } else {
+        }
+        else
+        {
             Toast.makeText(LoginActivity.this, "Preencha todos os campos.", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void manipularResultadoLogin(Task<AuthResult> task, View view) {
-        if (!isFinishing()) {
-            if (task.isSuccessful()) {
+    private void manipularResultadoLogin(Task<AuthResult> task, View view)
+    {
+        if (!isFinishing())
+        {
+            if (task.isSuccessful())
+            {
                 FirebaseUser usuario = auth.getCurrentUser();
-                if (usuario != null) {
+                if (usuario != null)
+                {
                     Log.d("LoginActivity", "Usuário logado: " + usuario.getEmail());
                     Toast.makeText(LoginActivity.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
                     irDashboard(view);
-                } else {
+                }
+                else
+                {
                     Toast.makeText(LoginActivity.this, "Falha ao fazer login!", Toast.LENGTH_SHORT).show();
                 }
-            } else {
+            }
+            else
+            {
                 Log.e("LoginActivity", "Erro no login: " + task.getException());
                 Toast.makeText(LoginActivity.this, "Falha ao fazer login. Verifique suas credenciais.", Toast.LENGTH_SHORT).show();
             }
@@ -78,6 +100,7 @@ public class LoginActivity extends AppCompatActivity
     {
         Intent intent = new Intent(this, Dashboard.class);
         startActivity(intent);
+        finishAffinity();
     }
 
     public void irTelaCadastro(View view)

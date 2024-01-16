@@ -84,6 +84,7 @@
                         android:layout_width="0dp"
                         android:layout_height="150dp"
                         android:layout_weight="1"
+                        android:onClick="irCardPH"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="2dp"
                         app:cardUseCompatPadding="true">
@@ -97,7 +98,7 @@
                                 android:layout_marginTop="25dp"
                                 android:layout_width="65dp"
                                 android:layout_height="65dp"
-                                android:src="@drawable/ph"
+                                android:src="@drawable/medidor_de_ph"
                                 android:layout_gravity="center"
                                 tools:ignore="ContentDescription">
                             </ImageView>
@@ -120,6 +121,7 @@
                         android:layout_height="150dp"
                         android:layout_weight="1"
                         app:cardCornerRadius="15dp"
+                        android:onClick="irCardTemperatura"
                         app:cardElevation="2dp"
                         app:cardUseCompatPadding="true">
                         <!-- Conteúdo -->
@@ -196,6 +198,7 @@
                         android:layout_weight="1"
                         app:cardCornerRadius="15dp"
                         app:cardElevation="2dp"
+                        android:onClick="irCardTurbidez"
                         app:cardUseCompatPadding="true">
                         <!-- Conteúdo -->
                         <LinearLayout

@@ -25,9 +25,8 @@
             android:layout_height="30dp"
             android:src="@drawable/baseline_refresh_24"
             android:layout_gravity="end"
-            android:contentDescription="@string/exit_icon"
             android:onClick="atualizar"
-            />
+            tools:ignore="ContentDescription" />
     </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
@@ -195,7 +194,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cadastrar"
+                android:id="@+id/exportarTDS"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"

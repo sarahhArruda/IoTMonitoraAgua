@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage">
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,13 +18,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IoTMonitoraAgua"
         tools:targetApi="31">
+        
         <activity
-            android:name=".Alertas_Dados"
+            android:name=".Turbidez"
             android:exported="false"
             android:parentActivityName=".Dashboard"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"
             />
+        <activity
+            android:name=".PH"
+            android:exported="false"
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Temperatura"
+            android:exported="false"
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".Alertas_Dados"
+            android:exported="false"
+            android:parentActivityName=".Dashboard"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".Sensor_TDS"
             android:exported="false"
@@ -110,6 +137,8 @@
         </activity>
         <activity
             android:name=".LoginActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"
             android:exported="false" />
         <activity
             android:name=".SplashScreenAppAgua"
