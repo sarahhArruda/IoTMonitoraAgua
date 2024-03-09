@@ -7,21 +7,14 @@
         android:icon="@drawable/ic_baseline_home_24"
         >
     </item>
-    <item
-        android:id="@+id/dadosItemMenu"
-        android:title="@string/dados"
-        android:icon="@drawable/dados"
-        >
-    </item>
 
-    <!-- fora, por enquanto ^-^
+
     <item
         android:id="@+id/pontosItemMenu"
         android:title="@string/dispositivos"
         android:icon="@drawable/pontos_coleta"
         >
     </item>
-    -->
     <item
         android:id="@+id/notificaçõesDados"
         android:title="@string/alertas"

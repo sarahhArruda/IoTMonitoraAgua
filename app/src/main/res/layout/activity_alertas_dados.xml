@@ -16,8 +16,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-        app:title="Alertas"
+        app:title="Notificações"
         app:titleTextColor="@color/white">
     </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/listaAlertas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAlerta">
+    </ListView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

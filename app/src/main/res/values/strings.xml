@@ -22,6 +22,6 @@
     <string name="exportar_dados">Exportar Dados</string>
     <string name="s_lidos_dissolvidos_totais">Sólidos Dissolvidos Totais</string>
     <string name="condutividade_el_trica">CDE</string>
-    <string name="alertas">Alertas</string>
+    <string name="alertas">Notificações</string>
     <string name="os_dados_em_gr_ficosTemp">Os dados em gráficos</string>
 </resources>
