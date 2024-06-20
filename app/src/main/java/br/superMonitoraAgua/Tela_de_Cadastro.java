@@ -45,12 +45,16 @@ public class Tela_de_Cadastro extends AppCompatActivity
         campoConfirmar = findViewById(R.id.Confirmar_Senha_Cadastro);
         cadastrarBotao = findViewById(R.id.cadastrar);
 
-        cadastrarBotao.setOnClickListener(new View.OnClickListener() {
+
+
+        cadastrarBotao.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
                 validarCadastro(view);
             }
-    });
+        });
     }
 
     public void validarCadastro(View view)
@@ -65,7 +69,8 @@ public class Tela_de_Cadastro extends AppCompatActivity
         Log.d("dados", "senha: " + senha);
         Log.d("dados", "confirmSenha: " + confirmSenha);
 
-        if (!email.isEmpty()) {
+        if (!email.isEmpty())
+        {
             if (!senha.isEmpty())
             {
                 if (senha.equals(confirmSenha))
@@ -77,20 +82,26 @@ public class Tela_de_Cadastro extends AppCompatActivity
                     usuario.setSenha(senha);
                     cadastrarUsuario(usuario);
                 }
-                if (senha.length() < 6) {
+                if (senha.length() < 6)
+                {
                     Toast.makeText(Tela_de_Cadastro.this, "A senha deve ter pelo menos 6 caracteres!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
-                else {
+                else
+                {
                     // As senhas não conferem
                     Toast.makeText(Tela_de_Cadastro.this, "Senhas não conferem!", Toast.LENGTH_SHORT).show();
                 }
-            } else {
+            }
+            else
+            {
                 // A senha não está preenchida
                 Toast.makeText(Tela_de_Cadastro.this, "Preencha a senha!", Toast.LENGTH_SHORT).show();
             }
-        } else {
+        }
+        else
+        {
             // O email não está preenchido
             Toast.makeText(Tela_de_Cadastro.this, "Preencha o email!", Toast.LENGTH_SHORT).show();
         }

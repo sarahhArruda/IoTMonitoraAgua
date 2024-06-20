@@ -3,6 +3,10 @@ package br.superMonitoraAgua;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -23,15 +27,14 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+
 public class LoginActivity extends AppCompatActivity
 {
     private com.google.android.material.textfield.TextInputEditText campoSenha, campoEmail;
     private ProgressBar barra;
-
     Usuario usuario;
+
     private FirebaseAuth auth = FirebaseAuth.getInstance();
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -108,4 +111,5 @@ public class LoginActivity extends AppCompatActivity
         Intent intent = new Intent(this, Tela_de_Cadastro.class);
         startActivity(intent);
     }
+
 }

@@ -7,8 +7,11 @@
         tools:ignore="ScopedStorage">
     </uses-permission>
 
-    <uses-permission android:name="android.permission.INTERNET">
-    </uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -18,7 +21,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IoTMonitoraAgua"
         tools:targetApi="31">
-        
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCwjTKOLgOguC11hHkA-k7DKiK5_LMnxYU"
+            >
+        </meta-data>
+
+
         <activity
             android:name=".Turbidez"
             android:exported="false"
@@ -85,16 +95,17 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
         <activity
             android:name=".Pontos_de_Coleta"
             android:exported="false"
             android:parentActivityName=".Dashboard"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
+            tools:ignore="DiscouragedApi,LockedOrientationActivity">
+
         </activity>
+
+
         <activity
             android:name=".Dados"
             android:exported="false"

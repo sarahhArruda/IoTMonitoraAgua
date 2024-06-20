@@ -101,14 +101,17 @@ public class Temperatura extends AppCompatActivity {
         DatabaseReference exportar = FirebaseDatabase.getInstance().getReference();
         exportar.child("PAI").child("Sensor").child("Temperatura").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot userSnapshot : snapshot.getChildren()) {
+            public void onDataChange(@NonNull DataSnapshot snapshot)
+            {
+                for (DataSnapshot userSnapshot : snapshot.getChildren())
+                {
                     Map<String, Object> user = (Map<String, Object>) userSnapshot.getValue();
                     userList.add(user);
                     if (userList.size() == 10) break;
                 }
 
-                for (int i = userList.size() - 1; i >= 0; i--) {
+                for (int i = userList.size() - 1; i >= 0; i--)
+                {
                     Map<String, Object> user = userList.get(i);
                     float valor = Float.parseFloat(user.get("Temperatura").toString());
                     String valorString = String.valueOf(valor);
@@ -129,7 +132,8 @@ public class Temperatura extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+            public void onCancelled(@NonNull DatabaseError error)
+            {
                 // Exibir mensagem de erro
                 Toast.makeText(Temperatura.this, "Erro ao adicionar!", Toast.LENGTH_SHORT).show();
             }
@@ -140,30 +144,28 @@ public class Temperatura extends AppCompatActivity {
     {
         try
         {
-            // Verificar se o armazenamento externo está disponível para escrita
+            //Verifica se o armazenamento externo está disponível para escrita
             String state = Environment.getExternalStorageState();
 
             if (Environment.MEDIA_MOUNTED.equals(state))
             {
-                // Obter o diretório de downloads no armazenamento externo
+                //Obtem o diretório de downloads no armazenamento externo
                 File downloadsDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS);
 
-                // Criar o arquivo onde o JSON será salvo
+                //Cria o arquivo onde o JSON será salvo
                 File file = new File(downloadsDir, "dados.json");
 
-                // Criar um fluxo de saída para escrever no arquivo
+
                 try (FileOutputStream fos = new FileOutputStream(file);
                      OutputStreamWriter osw = new OutputStreamWriter(fos)) {
                     // Escrever o JSON no arquivo
                     osw.write(json);
                 }
 
-                // Exibir mensagem de sucesso no Logcat
                 Log.d("Salvando JSON", "JSON salvo com sucesso em: " + file.getAbsolutePath());
             }
             else
             {
-                // Exibir mensagem de erro no Logcat se o armazenamento externo não estiver disponível
                 Log.e("Salvando JSON", "Armazenamento externo não disponível para escrita");
             }
         }

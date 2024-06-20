@@ -78,16 +78,12 @@ public class Dashboard extends AppCompatActivity
                         case (R.id.Home):
                             startActivity(new Intent(this, Dashboard.class));
                             return true;
-
                         case (R.id.pontosItemMenu):
                             startActivity(new Intent(this, Pontos_de_Coleta.class));
-
                             return true;
                         case (R.id.notificaçõesDados):
                             startActivity(new Intent(this, Alertas_Dados.class));
-
                             return true;
-
                         case (R.id.usuarioItemMenu):
                             startActivity(new Intent(this, Conta.class));
                             return true;

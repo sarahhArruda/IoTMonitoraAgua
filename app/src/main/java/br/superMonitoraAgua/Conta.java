@@ -45,8 +45,8 @@ public class Conta extends AppCompatActivity
 
         auth = FirebaseAuth.getInstance();
 
-        textViewStatusLogin = findViewById(R.id.textViewStatusLogin);
-        updateUI();
+       // textViewStatusLogin = findViewById(R.id.textViewStatusLogin);
+        //updateUI();
 
         ImageView exitIcon = findViewById(R.id.exitIcon);
         exitIcon.setOnClickListener(new View.OnClickListener()
@@ -58,7 +58,7 @@ public class Conta extends AppCompatActivity
             }
         });
     }
-    //caixa de dialogo para perguntar se o usuario quer encerrar a "sessão"
+
     private void caixaDeDialogo(View view)
     {
         new AlertDialog.Builder(this)

@@ -24,4 +24,5 @@
     <string name="condutividade_el_trica">CDE</string>
     <string name="alertas">Notificações</string>
     <string name="os_dados_em_gr_ficosTemp">Os dados em gráficos</string>
+    <string name="sua_atividade">Sua atividade</string>
 </resources>

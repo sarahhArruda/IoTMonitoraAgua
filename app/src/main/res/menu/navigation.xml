@@ -7,8 +7,6 @@
         android:icon="@drawable/ic_baseline_home_24"
         >
     </item>
-
-
     <item
         android:id="@+id/pontosItemMenu"
         android:title="@string/dispositivos"
